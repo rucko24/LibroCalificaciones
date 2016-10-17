@@ -118,16 +118,16 @@ public class ArraysBidi {
 	public static void print( String s ) { System.out.print(s); }
 	public static void main(String[] args) {
 		
-		int arrayNotas[][] = {{64,56,96},
-				 			    {78,55,96},
-				 				{10,100,90},
-				 				{55,70,60},
-				 				{29,88,75},
-				 				{56,78,46},
-				 				{98,45,63},
-				 				{97,53,46},
-				 				{68,75,43},
-				 				{75,85,96}};
+		int arrayNotas[][] = {{87,96,70},
+				 			    {68,87,90},
+				 				{94,100,90},
+				 				{100,81,82},
+				 				{83,65,85},
+				 				{78,87,65},
+				 				{85,75,83},
+				 				{91,94,100},
+				 				{76,72,84},
+				 				{87,93,73}};
 		
 		ArraysBidi o = new ArraysBidi(" Escuela de lacras", arrayNotas);
 		o.mostrar();

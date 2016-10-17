@@ -2,10 +2,12 @@ package arrayDoble;
 /*
  * libro de calificaciones de array
  */
+import java.text.DecimalFormat;
 public class ArraysBidi {
 	
 	private String nombre;
 	private int calificaciones[][];
+	private DecimalFormat dosDigi = new DecimalFormat("0.00");
 	
 	public ArraysBidi( String nombre, int calificaciones[][]) {
 	
@@ -83,7 +85,7 @@ public class ArraysBidi {
 			}
 				
 			double promedio = getPromedio(calificaciones[f]);
-			print(" "+promedio);
+			print(" "+dosDigi.format(promedio));
 		}
 			
 	}

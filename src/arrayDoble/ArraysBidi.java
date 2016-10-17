@@ -72,20 +72,20 @@ public class ArraysBidi {
 		print("\t\t"); //alinea las columnas 
 		
 		for( int f=0; f<calificaciones[0].length; f++ ) {
-			print("\tPrueba "+(f+1)+" ");
+			print("\tPrueba"+(f+1));
 		}
 		
 		print("\tPromedio ");
 		
 		for( int f=0; f<calificaciones.length; f++ ) {
-			print("\nEstudiante: "+(f+1)+"\t\t");
+			print("\nEstudiante: "+(f+1)+"\t");
 			
 			for(int tmp : calificaciones[f]) {
-				print(" "+tmp);
+				print("\t"+tmp);
 			}
 				
 			double promedio = getPromedio(calificaciones[f]);
-			print(" "+dosDigi.format(promedio));
+			print("\t "+dosDigi.format(promedio));
 		}
 			
 	}

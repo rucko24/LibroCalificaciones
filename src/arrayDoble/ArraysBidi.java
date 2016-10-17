@@ -96,20 +96,22 @@ public class ArraysBidi {
 		print("\nDistribucion de notas\n");
 		int fre[] = new int[11];
 		
-		for( int f=0; f<calificaciones.length; f++ ) {
-			for( int c=0; c<calificaciones[f].length; c++ ) {
-				++fre[ c /10 ];
+		for( int tmp[] : calificaciones ) {
+			for( int tmp2 : tmp ) {
+				++fre[ tmp2 /10 ];
 			}
 		}
 		
 		for( int f=0; f<fre.length; f++) {
-			if( f == 10)
-				print(" 100: ");
-			else
-				print("\n"+(f*10)+" - "+((f*10)+9)+": ");
 			
-			for( int c=0; c<fre[f]; c++ ) 
-				print(" *");
+			if( f == 10)
+				print("\n  100: ");
+			else 
+				print("\n"+f*10+"-"+(((f*10)+9)+": "));
+			
+			for( int c=0; c<fre[f]; c++ ) {
+				print("*");
+			}
 		}
 		
 		

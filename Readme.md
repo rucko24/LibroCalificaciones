@@ -1,2 +1,2 @@
 Libro de Calificaciones con array bidimensional
-pag 285.
+Figura 7.10 pag 275.

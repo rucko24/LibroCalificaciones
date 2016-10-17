@@ -24,7 +24,7 @@ public class ArraysBidi {
 		print("\nBienvenido al libro de calificaciones "+getNombre());
 		mostrarNotas();
 		print("\n\nNotas");
-		print("\nMINIMA: "+notaMinima()+"- MAXIMA: "+notaMaxima()+"\n");
+		print("\nMINIMA: "+notaMinima()+" - MAXIMA: "+notaMaxima()+"\n");
 		distribucionDeNotas();
 	}
 	

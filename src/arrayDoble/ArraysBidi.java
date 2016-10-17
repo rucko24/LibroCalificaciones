@@ -23,7 +23,7 @@ public class ArraysBidi {
 	
 		print("\nBienvenido al libro de calificaciones "+getNombre());
 		mostrarNotas();
-		print("\nNotas");
+		print("\n\nNotas");
 		print("\nMINIMA: "+notaMinima()+"- MAXIMA: "+notaMaxima()+"\n");
 		distribucionDeNotas();
 	}
@@ -72,34 +72,32 @@ public class ArraysBidi {
 		print("\t\t"); //alinea las columnas 
 		
 		for( int f=0; f<calificaciones[0].length; f++ ) {
-			print("\tPrueba"+(f+1));
+			print("Prueba "+(f+1)+" ");
 		}
 		
 		print("\tPromedio ");
 		
 		for( int f=0; f<calificaciones.length; f++ ) {
-			print("\nEstudiante: "+(f+1)+"\t");
+			print("\nEstudiante: "+(f+1));
 			
-			for(int tmp : calificaciones[f]) {
-				print("\t"+tmp);
+			for( int c : calificaciones[f]) {
+				print("\t  "+c);
 			}
 				
 			double promedio = getPromedio(calificaciones[f]);
-			print("\t "+dosDigi.format(promedio));
-		}
-			
+			print("\t\t "+dosDigi.format(promedio));
+		}	
 	}
-	
 	
 	public void distribucionDeNotas() {
 		
 		print("\nDistribucion de notas\n");
+		
 		int fre[] = new int[11];
 		
-		for( int tmp[] : calificaciones ) {
-			for( int tmp2 : tmp ) {
-				++fre[ tmp2 /10 ];
-			}
+		for( int f=0; f<calificaciones.length; f++ ) {
+			for( int c=0; c<calificaciones[f].length;  c++ ) 
+				++fre[ c /10 ];	
 		}
 		
 		for( int f=0; f<fre.length; f++) {
@@ -107,7 +105,7 @@ public class ArraysBidi {
 			if( f == 10)
 				print("\n  100: ");
 			else 
-				print("\n"+f*10+"-"+(((f*10)+9)+": "));
+				print("\n"+f*10+"-"+((f*10)+9)+": ");
 			
 			for( int c=0; c<fre[f]; c++ ) {
 				print("*");
@@ -117,6 +115,7 @@ public class ArraysBidi {
 		
 	}
 	
+	public static void println( String s) { System.out.println(s);}
 	public static void print( String s ) { System.out.print(s); }
 	public static void main(String[] args) {
 		

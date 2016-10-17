@@ -78,7 +78,7 @@ public class ArraysBidi {
 		print("\tPromedio ");
 		
 		for( int f=0; f<calificaciones.length; f++ ) {
-			print("\nEstudiante: "+(f+1));
+			print("\nEstudiante "+(f+1)+":");
 			
 			for( int c : calificaciones[f]) {
 				print("\t  "+c);
@@ -95,9 +95,10 @@ public class ArraysBidi {
 		
 		int fre[] = new int[11];
 		
-		for( int f=0; f<calificaciones.length; f++ ) {
-			for( int c=0; c<calificaciones[f].length;  c++ ) 
-				++fre[ c /10 ];	
+		for( int f[] : calificaciones ) {
+			for( int c : f) {
+				++fre[ c / 10 ];	
+			}
 		}
 		
 		for( int f=0; f<fre.length; f++) {
@@ -108,7 +109,7 @@ public class ArraysBidi {
 				print("\n"+f*10+"-"+((f*10)+9)+": ");
 			
 			for( int c=0; c<fre[f]; c++ ) {
-				print("*");
+				print(" *");
 			}
 		}
 		

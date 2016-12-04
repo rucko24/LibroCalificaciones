@@ -89,7 +89,10 @@ public class Array2D {
 		
 		for( int f=0; f<calificaciones.length; f++ ) {
 			print("\nEstudiante "+(f+1)+":");
-			
+			/* for( int c=0; c<calificaciones[f].length; c++ ) {
+			   	print("\t"+calificaciones[f][c]);
+			   }
+			*/
 			for( int c : calificaciones[f]) {
 				print("\t  "+c);
 			}
@@ -107,6 +110,16 @@ public class Array2D {
 		
 		int fre[] = new int[11];
 		
+		/*	Con for-anidado
+		for( int f=0; f<calificaciones.length; f++ ) {
+			for( int c=0; c<calificaciones[f].length; c++ ) {
+				++fre[calificaciones[f][c] / 10];
+			}
+		}	
+		/
+		*/
+	
+		//con doble for extendido
 		for( int f[] : calificaciones ) {
 			for( int c : f) {
 				++fre[ c / 10 ];	

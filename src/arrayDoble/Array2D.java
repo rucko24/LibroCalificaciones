@@ -3,31 +3,33 @@ package arrayDoble;
  * libro de calificaciones de array
  */
 import java.text.DecimalFormat;
-public class ArraysBidi {
+public class Array2D {
 	
-	private String nombre;
+	private String descripcion;
 	private int calificaciones[][];
 	private DecimalFormat dosDigi = new DecimalFormat("0.00");
 	
-	public ArraysBidi( String nombre, int calificaciones[][]) {
+	public Array2D( String descripcion, int calificaciones[][]) {
 	
-		this.nombre = nombre;
+		this.descripcion = descripcion;
 		this.calificaciones = calificaciones;
-	
+		
+		init();
 	}
 	
-	public void setNombre( String nombre ) { this.nombre = nombre; }
-	public String getNombre() { return nombre; }
 	
-	public void mostrar() {
+	public void init() {
 	
 		print("\nBienvenido al libro de calificaciones "+getNombre());
 		mostrarNotas();
 		print("\n\nNotas");
 		print("\nMINIMA: "+notaMinima()+" - MAXIMA: "+notaMaxima()+"\n");
-		distribucionDeNotas();
+		distribucionDeCalificaciones();
 	}
 	
+	/*
+	/	Calificación Minima
+	*/
 	public int notaMinima() {
 	
 		int min = calificaciones[0][0];
@@ -41,7 +43,9 @@ public class ArraysBidi {
 		return min;
 	
 	}
-	
+	/*
+	/	Calificación  Maxima
+	*/
 	public int notaMaxima() {
 		
 		int max = calificaciones[0][0];
@@ -56,6 +60,9 @@ public class ArraysBidi {
 		return max;
 	}
 	
+	/*
+	/	Obtener Promedio
+	*/
 	public double getPromedio( int calificaciones[]) {
 		
 		int suma = 0;
@@ -66,10 +73,13 @@ public class ArraysBidi {
 		return (double) suma / calificaciones.length;
 	}
 	
+	/*
+	/	Mostrar Notas
+	*/
 	public void mostrarNotas() {
 		
 		print("\nLas Calificaciones son----\n");
-		print("\t\t"); //alinea las columnas 
+		print("\t\t"); //Alinear las columnas 
 		
 		for( int f=0; f<calificaciones[0].length; f++ ) {
 			print("Prueba "+(f+1)+" ");
@@ -88,8 +98,10 @@ public class ArraysBidi {
 			print("\t\t "+dosDigi.format(promedio));
 		}	
 	}
-	
-	public void distribucionDeNotas() {
+	/*
+	/	Distribucion de Calificaciones
+	*/
+	public void distribucionDeCalificaciones() {
 		
 		print("\nDistribucion de notas\n");
 		
@@ -116,23 +128,22 @@ public class ArraysBidi {
 		
 	}
 	
-	public static void println( String s) { System.out.println(s);}
 	public static void print( String s ) { System.out.print(s); }
 	public static void main(String[] args) {
 		
 		int arrayNotas[][] = {{87,96,70},
-				 			    {68,87,90},
-				 				{94,100,90},
-				 				{100,81,82},
-				 				{83,65,85},
-				 				{78,87,65},
-				 				{85,75,83},
-				 				{91,94,100},
-				 				{76,72,84},
-				 				{87,93,73}};
+				     {68,87,90},
+				     {94,100,90},
+				     {100,81,82},
+				     {83,65,85},
+				     {78,87,65},
+				     {85,75,83},
+				     {91,94,100},
+				     {76,72,84},
+				     {87,93,73}};
 		
-		ArraysBidi o = new ArraysBidi(" Escuela de lacras", arrayNotas);
-		o.mostrar();
+		new Array2D(" Escuela de lacras", arrayNotas);
+		
 		 
 	}
 }

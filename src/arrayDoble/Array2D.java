@@ -1,6 +1,6 @@
 package arrayDoble;
 /*
- * libro de calificaciones de array
+ * libro de calificaciones de Array 2D
  */
 import java.text.DecimalFormat;
 public class Array2D {

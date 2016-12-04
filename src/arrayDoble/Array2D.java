@@ -20,17 +20,17 @@ public class Array2D {
 	
 	public void init() {
 	
-		print("\nBienvenido al libro de calificaciones "+getNombre());
+		print(this.descripcion+"\n");
 		mostrarNotas();
 		print("\n\nNotas");
-		print("\nMINIMA: "+notaMinima()+" - MAXIMA: "+notaMaxima()+"\n");
+		print("\nMINIMA: "+calificacionMinima()+" - MAXIMA: "+calificacionMaxima()+"\n");
 		distribucionDeCalificaciones();
 	}
 	
 	/*
 	/	Calificación Minima
 	*/
-	public int notaMinima() {
+	public int calificacionMinima() {
 	
 		int min = calificaciones[0][0];
 		for( int tmpCalif[] : calificaciones) {
@@ -46,7 +46,7 @@ public class Array2D {
 	/*
 	/	Calificación  Maxima
 	*/
-	public int notaMaxima() {
+	public int calificacionMaxima() {
 		
 		int max = calificaciones[0][0];
 		for( int tmpCalif[] : calificaciones) {
@@ -124,7 +124,7 @@ public class Array2D {
 				print(" *");
 			}
 		}
-		
+		print("\n");
 		
 	}
 	
@@ -142,7 +142,7 @@ public class Array2D {
 				     {76,72,84},
 				     {87,93,73}};
 		
-		new Array2D(" Escuela de lacras", arrayNotas);
+		new Array2D("Libro de Calificaciones", arrayNotas);
 		
 		 
 	}

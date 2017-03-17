@@ -2,6 +2,8 @@ package arrayDoble;
 /*
  * libro de calificaciones de Array 2D
  */
+/*autor rubenorlando
+*/
 import java.text.DecimalFormat;
 public class Array2D {
 	
@@ -15,6 +17,7 @@ public class Array2D {
 		this.calificaciones = calificaciones;
 		
 		init();
+
 	}
 	
 	
@@ -140,20 +143,22 @@ public class Array2D {
 		print("\n");
 		
 	}
-	
+	/*
+	*main
+	*/
 	public static void print( String s ) { System.out.print(s); }
 	public static void main(String[] args) {
 		
 		int arrayNotas[][] = {{87,96,70},
-				     {68,87,90},
-				     {94,100,90},
-				     {100,81,82},
-				     {83,65,85},
-				     {78,87,65},
-				     {85,75,83},
-				     {91,94,100},
-				     {76,72,84},
-				     {87,93,73}};
+				     		  {68,87,90},
+				     		  {94,100,90},
+				     		  {100,81,82},
+				     		  {83,65,85},
+				     		  {78,87,65},
+				      		  {85,75,83},
+				     		  {91,94,100},
+				     		  {76,72,84},
+				     	      {87,93,73}};
 		
 		new Array2D("Libro de Calificaciones", arrayNotas);
 		

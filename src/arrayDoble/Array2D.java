@@ -1,9 +1,7 @@
 package arrayDoble;
 /*
- * libro de calificaciones de Array 2D
+ * libro de calificaciones de Array 2D test
  */
-/*autor rubenorlando
-*/
 import java.text.DecimalFormat;
 public class Array2D {
 	
@@ -17,7 +15,6 @@ public class Array2D {
 		this.calificaciones = calificaciones;
 		
 		init();
-
 	}
 	
 	
@@ -113,21 +110,21 @@ public class Array2D {
 		
 		int fre[] = new int[11];
 		
-		/*	Con for-anidado
+		//	Con for-anidado
 		for( int f=0; f<calificaciones.length; f++ ) {
 			for( int c=0; c<calificaciones[f].length; c++ ) {
 				++fre[calificaciones[f][c] / 10];
 			}
 		}	
-		/
-		*/
+		
+		
 	
 		//con doble for extendido
-		for( int f[] : calificaciones ) {
+		/*for( int f[] : calificaciones ) {
 			for( int c : f) {
 				++fre[ c / 10 ];	
 			}
-		}
+		}*/
 		
 		for( int f=0; f<fre.length; f++) {
 			
@@ -143,25 +140,24 @@ public class Array2D {
 		print("\n");
 		
 	}
-	/*
-	*main
-	*/
+	
 	public static void print( String s ) { System.out.print(s); }
 	public static void main(String[] args) {
 		
 		int arrayNotas[][] = {{87,96,70},
-				     		  {68,87,90},
-				     		  {94,100,90},
-				     		  {100,81,82},
-				     		  {83,65,85},
-				     		  {78,87,65},
-				      		  {85,75,83},
-				     		  {91,94,100},
-				     		  {76,72,84},
-				     	      {87,93,73}};
+				     {68,87,90},
+				     {94,100,90},
+				     {100,81,82},
+				     {83,65,85},
+				     {78,87,65},
+				     {85,75,83},
+				     {91,94,100},
+				     {76,72,84},
+				     {87,93,73}};
 		
 		new Array2D("Libro de Calificaciones", arrayNotas);
 		
-		 
+		 print("hola testeando brach");
+		 print("Hola testeando branch 2");
 	}
 }

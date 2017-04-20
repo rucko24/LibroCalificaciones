@@ -113,21 +113,21 @@ public class Array2D {
 		
 		int fre[] = new int[11];
 		
-		/*	Con for-anidado
+		//	Con for-anidado
 		for( int f=0; f<calificaciones.length; f++ ) {
 			for( int c=0; c<calificaciones[f].length; c++ ) {
 				++fre[calificaciones[f][c] / 10];
 			}
 		}	
-		/
-		*/
+		
+		
 	
 		//con doble for extendido
-		for( int f[] : calificaciones ) {
+		/*for( int f[] : calificaciones ) {
 			for( int c : f) {
 				++fre[ c / 10 ];	
 			}
-		}
+		}*/
 		
 		for( int f=0; f<fre.length; f++) {
 			

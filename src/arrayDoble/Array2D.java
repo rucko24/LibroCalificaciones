@@ -10,7 +10,8 @@ public class Array2D {
 	private String descripcion;
 	private int calificaciones[][];
 	private DecimalFormat dosDigi = new DecimalFormat("0.00");
-	
+	private String issu53 = "fixed issue #53";
+
 	public Array2D( String descripcion, int calificaciones[][]) {
 	
 		this.descripcion = descripcion;
@@ -22,7 +23,8 @@ public class Array2D {
 	
 	
 	public void init() {
-	
+	   
+        print("Issue: "+issu53);
 		print(this.descripcion+"\n");
 		mostrarNotas();
 		print("\n\nNotas");

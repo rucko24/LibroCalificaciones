@@ -9,6 +9,8 @@ public class Array2D {
 	private int calificaciones[][];
 	private DecimalFormat dosDigi = new DecimalFormat("0.00");
 	
+    private String hotFix = "hotFix";
+
 	public Array2D( String descripcion, int calificaciones[][]) {
 	
 		this.descripcion = descripcion;
@@ -19,7 +21,8 @@ public class Array2D {
 	
 	
 	public void init() {
-	
+	   
+        print("ready: "+hotFix);
 		print(this.descripcion+"\n");
 		mostrarNotas();
 		print("\n\nNotas");

@@ -9,8 +9,6 @@ public class Array2D {
 	private int calificaciones[][];
 	private DecimalFormat dosDigi = new DecimalFormat("0.00");
 	
-    private String hotFix = "hotFix";
-
 	public Array2D( String descripcion, int calificaciones[][]) {
 	
 		this.descripcion = descripcion;
@@ -21,8 +19,7 @@ public class Array2D {
 	
 	
 	public void init() {
-	   
-        print("ready: "+hotFix);
+	
 		print(this.descripcion+"\n");
 		mostrarNotas();
 		print("\n\nNotas");
@@ -113,21 +110,21 @@ public class Array2D {
 		
 		int fre[] = new int[11];
 		
-		/*	Con for-anidado
+		//	Con for-anidado
 		for( int f=0; f<calificaciones.length; f++ ) {
 			for( int c=0; c<calificaciones[f].length; c++ ) {
 				++fre[calificaciones[f][c] / 10];
 			}
 		}	
-		/
-		*/
+		
+		
 	
 		//con doble for extendido
-		for( int f[] : calificaciones ) {
+		/*for( int f[] : calificaciones ) {
 			for( int c : f) {
 				++fre[ c / 10 ];	
 			}
-		}
+		}*/
 		
 		for( int f=0; f<fre.length; f++) {
 			
